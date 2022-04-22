@@ -1,0 +1,39 @@
+.c-header {
+    background-color: $white;
+    padding: 0.25rem 0;
+
+    &__inner {
+        display: flex;
+    }
+
+    .c-user { margin-left: auto; }
+}
+
+
+.c-navbar {
+    margin: 0 auto;
+    padding: 0;
+
+    .navbar-toggler {}
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                padding: 0.875rem 1.5rem;
+                color: $blue;
+                @include fs-16;
+                font-weight: 700;
+                text-transform: capitalize;
+                display: flex;
+
+                .c-icon { margin-right: 0.75rem; }
+            }
+
+            &.active {
+                background-color: $osian-blue-08;
+
+                .c-icon {}
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+body {
+    background-color: $gray-e5;
+    font-family: 'Rubik', sans-serif;
+}
+
+%align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

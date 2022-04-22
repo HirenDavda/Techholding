@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizzbuzz</title>
+</head>
+<body>
+    
+    <div class="container">
+        <input type="text" id="textNumber">
+
+        <h2>JavaScript For Loop</h2>
+
+        <p id="demo"></p>
+
+        <input type="button" onclick="calculateLogic()" value="submit">
+    </div>    
+
+    <script>
+        function calculateLogic(){
+            var num = document.getElementById("textNumber").value;
+            var output = "";
+            for (i = 1; i <= num; i++) {
+                if(i % (3*5) == 0) {
+                    output = output + " fizzbuzz" ;
+                } else if(i % 5 == 0){
+                    output = output + " buzz" ;
+                } else if(i % 3 == 0){
+                    output = output + " fizz" ;
+                } else {
+                    output = output + " " + i;
+                }
+            }
+            document.getElementById("demo").innerHTML = output;
+        }
+    </script>
+</body>
+</html>

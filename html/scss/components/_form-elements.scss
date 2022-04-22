@@ -1,0 +1,79 @@
+.c-search {
+    line-height: normal;    
+    margin: 2.5rem 0 1.25rem 0;
+
+    &__label {
+        @include fs-12;
+        color: $blue;
+        margin-bottom: 0;
+        display: flex;
+    }
+    
+    &__control {
+        @include fs-16;
+        color: $black-87;
+        text-transform: capitalize;
+        width: calc(100% - 3.75rem);
+        border: 0;
+        background: transparent;
+    }
+
+    &__body {
+        border-bottom: 0.125rem solid $blue;
+        padding: 0.625rem 0 0.75rem;
+        display: flex;
+        align-items: center;
+
+        &:focus,
+        &:focus-visible {
+            outline: 0;
+        }
+
+        .c-icon {
+            cursor: pointer;
+        }
+        .c-icon--search { margin-right: 0.75rem; }
+        .c-icon--close { margin-left: 0.75rem; }
+    }
+}
+
+// Read only
+.c-form-readonly {
+    margin-bottom: 1.25rem;
+    
+    &__label {
+        @include fs-12;
+        color: rgba($black, 0.38);
+        margin-bottom: 0;
+    }
+    &__text {
+        @include fs-16;
+        color: $black-87;
+    }
+}
+
+
+// Form group
+.c-form-group {
+    margin-bottom: 1.25rem;
+    
+    &__label {
+        @include fs-12;
+        color: $blue;
+        margin-bottom: 0;
+        display: flex;
+    }
+    &__control {
+        padding: 0.25rem 0;
+        @include fs-16;
+        color: $black-87;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid $blue;
+        width: 100%;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}

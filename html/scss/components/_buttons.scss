@@ -1,0 +1,74 @@
+.c-button {
+
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--icons-right {
+        .c-icon { margin-right: 0.5rem; }
+    }
+
+    &--icons-left {
+        .c-icon { margin-left: 0.5rem; }
+    }
+
+    &--small {
+        @include fs-12;        
+        text-transform: capitalize;
+        padding: 0.25rem 1.25rem;
+        border-radius: 1.5rem;
+    }
+    &--medium {
+        @include fs-14;
+        font-weight: 500;  
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        border-radius: 1.5rem;
+    }
+    &--large {
+        @include fs-16;
+        padding: 0.75rem 2rem;
+        border-radius: 2.5rem;
+        font-weight: 500;
+    }
+
+    &--bg {
+        border: 0;
+
+        &--blue {
+            background-color: $blue;
+            color: $white !important;
+        }
+    }
+
+    &--br {
+        border-style: solid;
+        border-width: 1px;
+
+        &--blue { 
+            border-color: $blue; 
+            color: $blue;
+        }
+    }
+}
+
+.c-button-group {
+    display: flex;
+    width: 100%;
+
+    &--align-right {
+        justify-content: flex-end;
+    }
+
+    &--align-between {
+        justify-content: space-between;
+    }
+}

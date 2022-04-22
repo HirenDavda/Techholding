@@ -1,0 +1,185 @@
+.c-event {
+    padding-bottom: 1.25rem;
+
+    &__title {
+        @include fs-20;
+        color: $blue;
+        font-weight: 500;        
+        margin-bottom: 1rem;
+    }    
+}
+
+
+.c-events-card {
+    background-color: $white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    width: calc(100% - 0.75rem);
+    margin: 0 auto;
+
+    &__label {
+        @include fs-14;
+        color: $black-87;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    &__text {
+        @include fs-14;
+        color: $blue;
+        margin-bottom: 0.25rem;
+    }
+    &__type {
+        display: flex;
+        margin-bottom: 0.5rem;
+        
+        .c-events-card__badge {
+            margin-right: 0.75rem;
+        }
+    }
+    &__badge {
+        display: flex;
+        align-items: center;
+        @include fs-12;
+        color: $black-60;
+
+        &__text { 
+            color: $black-87; 
+            margin-left: 0.25rem;
+        }
+    }
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.125rem;
+
+        &__text {
+            @include fs-12;
+            color: $black-87;
+        }
+    }
+}
+
+.c-event-slider {
+    position: relative;
+
+    .slick-list { margin: 0 2.375rem; }
+
+    .slick-arrow {
+        position: absolute;
+        top: 0;
+        border: 0;
+        width: 2rem;
+        height: 100%;        
+        border-radius: 0.25rem;
+        z-index: 1;
+        font-size: 0;
+        cursor: pointer;
+
+        &:focus { outline: 0; }
+
+        &.slick-prev {
+            left: 0;
+            background: url(../../images/icons/left.svg) no-repeat center center $white;
+        }
+        &.slick-next {
+            right: 0;
+            background: url(../../images/icons/right.svg) no-repeat center center $white;
+        }
+    }
+}
+
+
+.c-deck {
+    background-color: $blue-08;
+
+    &__title {
+        @include fs-14;
+        color: $black-87;
+        font-weight: 600;
+        padding: 1rem 1rem 0;
+        margin-bottom: 1rem;
+    }
+
+    .c-btn-group {
+        display: flex;
+        position: relative;
+        margin: 0 1rem 0.5rem;
+
+        .btn {
+            width: 25%;
+            @include fs-14;
+            color: $blue;
+            font-weight: 500;
+            text-transform: uppercase;
+            border-radius: 0;
+            background-color: transparent;
+            border: solid 1px rgba(22, 70, 168, 0.5);
+            border-right: 0;
+
+            &.active,
+            &:active,
+            &:focus {
+                background-color: $blue-08;
+                color: $blue;
+                border: solid 1px rgba(22, 70, 168, 0.5);
+                box-shadow: none;
+            }
+
+            &:first-child {
+                border-radius: 1.875rem 0 0 1.875rem;
+            }
+            &:last-child {
+                border-radius: 0 1.875rem 1.875rem 0;
+                border-right: solid 1px rgba(22, 70, 168, 0.5);
+            }
+        }
+    }
+}
+
+
+.c-all-decks {
+   .--mt-30 { margin-top: 1.875rem; } 
+   .c-button + .c-button { margin-left: 1.25rem; }
+}
+
+.c-configs {
+    .c-button-group { 
+        padding-top: 1rem; 
+
+        .c-button { 
+            width: 50%; 
+
+            & + .c-button { margin-left: 0.5rem; }
+        }
+    }
+}
+
+// Alignment
+.c-shape-card {
+    @extend %align-center;
+    width: 100%;
+    height: 100vh;
+}
+
+.c-rectangle {
+    width: 18.75rem;
+    height: 9.375rem;
+    background-color: $blue;
+    @extend %align-center;
+}
+
+.c-square {
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: $black;
+    @extend %align-center;
+}
+
+.c-circle {
+    border-radius: 50%;
+    width: 4.688rem;
+    height: 4.688rem;
+    background-color: $gray-e5;
+}
+

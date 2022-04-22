@@ -1,0 +1,60 @@
+%i-bg {
+    display: inline-flex;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: auto;
+}
+
+
+.c-icon {
+
+    @extend %i-bg; 
+
+    // 18 * 18 width and height
+    &--search, &--close {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+    // 24 * 24 width and height
+    &--deck, &--assets, &--seat, &--seating, &--anchor {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &--view {
+        background-image: url(../../images/icons/view.svg);
+        width: 1.375rem;
+        height: 1rem;
+    }
+
+    &--close {
+        background-image: url(../../images/icons/close.svg);        
+    }
+
+    &--search {
+        background-image: url(../../images/icons/search.svg);        
+    }
+
+    &--deck {
+        background-image: url(../../images/icons/directionsBoat.svg);        
+    }
+    
+    &--assets {
+        background-image: url(../../images/icons/chair.svg);        
+    }
+    
+    &--seat {
+        background-image: url(../../images/icons/accountTree.svg);        
+    }
+    
+    &--seating {
+        background-image: url(../../images/icons/permContactCalendar.svg);        
+    }
+
+    &--anchor {
+        background-image: url(../../images/icons/openInNew.svg);        
+    }
+}    
